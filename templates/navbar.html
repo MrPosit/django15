@@ -1,0 +1,12 @@
+<nav>
+    <ul>
+        <li><a href="/">Главная</a></li>
+        <li><a href="/">О нас</a></li>
+        <li><a href="/">Контакты</a></li>
+    </ul>
+    {% if user.authenticated %}
+        <p>Привет, {{ user.name }}!</p>
+    {% else %}
+        <p><a href="/">Войти</a></p>
+    {% endif %}
+</nav>
